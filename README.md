@@ -1,1 +1,1 @@
-1. 运行gulp;
+1. run gulp;
