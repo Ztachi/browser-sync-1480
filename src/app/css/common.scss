@@ -1,0 +1,55 @@
+@import './fn';
+.tabs {
+    background-color: #fff;
+    overflow: hidden;
+    @include height(84);
+    font-size: toUnit(28);
+    >ul,
+    >svg {
+        float: left;
+    }
+    >ul {
+        overflow: hidden;
+        width: 851%;
+        position: relative;
+        &:after{
+            content:'';
+            display: block;
+            position: absolute;
+            top: toUnit(33);
+            height: toUnit(18);
+            width: 1px;
+            background-color: #dcdcdc;
+            right: 0;
+        }
+        >li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            &.active {
+                >span {
+                    display: inline-block;
+                    color: $c_g;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        display: block;
+                        height: toUnit(4);
+                        width: 120%;
+                        left: -10%;
+                        background-color: $c_g;
+                        border-radius: toUnit(4);
+                    }
+                }
+            }
+        }
+    }
+    >svg{
+        width: 5%;
+        height: 100%;
+        padding: 0 5%;
+        fill:#999;
+    }
+}

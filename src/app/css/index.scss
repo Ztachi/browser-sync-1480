@@ -1,0 +1,39 @@
+@import './fn';
+#svg {
+    display: none;
+}
+
+.page {
+    height: 100%;
+}
+
+//首页
+#index {
+    >a {
+        position: relative;
+        @include widthCenter(232);
+        margin: 0 auto;
+        display: block;
+        font-size: toUnit(30);
+        >div {
+            @include equalWH(232);
+            background-color: firebrick;
+            margin-bottom: toUnit(25);
+            >svg {
+                width: toUnit(135);
+                height: 100%;
+                fill: #fff;
+            }
+        }
+        &:first-child {
+            top:toUnit(220);
+            +a {
+                top: toUnit(325);
+                >div {
+                    background-color: #46dad8;
+                }
+            }
+        }
+    }
+}
+

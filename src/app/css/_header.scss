@@ -1,0 +1,18 @@
+@import 'fn';
+header{
+    text-align: center;
+    font-size: toUnit(34);
+    @include height(82);
+    background-color: $c_g;
+    color: #fff;
+    >div,>span{
+        float: left;
+    }
+    >span{
+        width: toUnit(75);
+    }
+    >div{
+        width:toUnit(600);
+        @include ellipsis;
+    }
+}

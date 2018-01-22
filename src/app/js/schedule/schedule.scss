@@ -1,0 +1,84 @@
+@import '../../css/fn';
+//日程首页
+#schedule {
+    background-color: #f5f5f5;
+    >#wrapper{
+        border-top: 1px solid #f5f5f5;
+        position: absolute;
+        top:toUnit(84);
+        bottom: 0;
+        width: 100%;
+        overflow: auto;
+        >li{
+            &:first-child{
+                >#scheduleList{
+                    margin-top: toUnit(20);
+                    background-color: #fff;
+                    >li{
+                        @include clear;
+                        >div{
+                            float: left;
+                            &:first-child{
+                                @include wh(150,111,1);
+                                padding-top: toUnit(36);
+                                >div{
+                                    height:50%;
+                                }
+                                +div{
+                                    @include wh(475,111);
+                                    padding-top: toUnit(36);
+                                    border-bottom: 1px solid #eee;
+                                    >div{
+                                        @include ellipsis;
+                                        &:first-child{
+                                            font-size: toUnit(26);
+                                            +div{
+                                                font-size: toUnit(22);
+                                                color: #999;
+                                            }
+                                        }
+                                    }                                  
+                                    +div{
+                                        @include wh(125,147,1);
+                                        border-bottom: 1px solid #eee;
+                                        >span{
+                                            display: inline-block;
+                                            margin-top: toUnit(54);
+                                            @include wh(66,31,1,1);
+                                            border: 1px solid $c_g;
+                                            color: $c_g;
+                                            &[type='2']{
+                                                border-color: #f15c55;
+                                                color: #f15c55;
+                                            }
+                                            &[type='3']{
+                                                border-color: #5cb94d;
+                                                color: #5cb94d;
+                                            }
+                                            &[type='4']{
+                                                border-color: #3bc0f1;
+                                                color: #3bc0f1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >#add{
+        position: absolute;
+        z-index: 9;
+        @include equalWH(45);
+        padding: toUnit(20);
+        border-radius: 50%;
+        background-color: $c_g;
+        fill: #fff;
+        bottom: toUnit(90);
+        right: toUnit(25);
+        box-shadow: 0 1px 5px 0 #ccc;                
+    }
+}
